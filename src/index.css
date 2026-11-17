@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Fonts */
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Colors */
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-top-band: var(--top-band);
+  --color-on-band: var(--on-band);
+  --color-on-band-muted: var(--on-band-muted);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-secondary: var(--on-surface-secondary);
+  --color-on-surface-muted: var(--on-surface-muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-saved: var(--saved);
+  --color-danger: var(--danger);
+  --color-badge-neutral-bg: var(--badge-neutral-bg);
+  --color-badge-neutral-text: var(--badge-neutral-text);
+  --color-badge-anywhere-bg: var(--badge-anywhere-bg);
+  --color-badge-anywhere-text: var(--badge-anywhere-text);
+  --color-salary: var(--salary);
+  --color-info-bg: var(--info-bg);
+  --color-info-text: var(--info-text);
+  --color-active-tab-line: var(--active-tab-line);
+
+  /* Shapes (Border Radius) */
+  --radius-badge: 6px;
+  --radius-control: 10px;
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  /* Typography (Font Sizes) */
+  --text-band-title: 36px;
+  --text-band-title--line-height: 44px;
+  --text-band-title--letter-spacing: -0.5px;
+
+  --text-band-title-tablet: 28px;
+  --text-band-title-tablet--line-height: 36px;
+  --text-band-title-tablet--letter-spacing: -0.25px;
+
+  --text-band-title-mobile: 24px;
+  --text-band-title-mobile--line-height: 32px;
+  --text-band-title-mobile--letter-spacing: -0.25px;
+
+  --text-section-title: 24px;
+  --text-section-title--line-height: 32px;
+
+  --text-section-title-mobile: 20px;
+  --text-section-title-mobile--line-height: 28px;
+
+  --text-card-title: 16px;
+  --text-card-title--line-height: 22px;
+
+  --text-body-md: 14px;
+  --text-body-md--line-height: 21px;
+
+  --text-meta: 13px;
+  --text-meta--line-height: 18px;
+
+  --text-caption: 12px;
+  --text-caption--line-height: 16px;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+
+  --text-mono-salary: 15px;
+  --text-mono-salary--line-height: 20px;
+
+  --text-mono-meta: 12px;
+  --text-mono-meta--line-height: 16px;
+
+  /* Spacing & Layout */
+  --spacing-gutter-xs: 12px;
+  --spacing-gutter-sm: 16px;
+  --spacing-gutter-md: 20px;
+  --spacing-gutter-lg: 24px;
+  --spacing-card-padding: 20px;
+  --container-max: 1360px;
+
+  /* Motion */
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: ease-out;
+}
+
+/* LIGHT MODE - Warm Paper */
+:root {
+  --bg: #F3F0E8;
+  --surface: #FAF8F3;
+  --top-band: #1B1A17;
+  --on-band: #F3F0E8;
+  --on-band-muted: #B5AE9F;
+  --on-surface: #1B1A17;
+  --on-surface-secondary: #55514A;
+  --on-surface-muted: #6F695E;
+  --border: #D9D3C5;
+  --primary: #1F5A4C;
+  --on-primary: #FAF8F3;
+  --saved: #C8452A;
+  --danger: #8E2430;
+  --badge-neutral-bg: #E9E4D6;
+  --badge-neutral-text: #4A463D;
+  --badge-anywhere-bg: #DDE7E3;
+  --badge-anywhere-text: #1F4A40;
+  --salary: #4A5A1E;
+  --info-bg: #EFE6D0;
+  --info-text: #5C4A12;
+  --active-tab-line: #1F5A4C;
+}
+
+/* DARK MODE - True Neutral Dark */
+.dark {
+  --bg: #0F1115;
+  --surface: #181B21;
+  --top-band: #0A0C10;
+  --on-band: #F8FAFC;
+  --on-band-muted: #94A3B8;
+  --on-surface: #E2E8F0;
+  --on-surface-secondary: #94A3B8;
+  --on-surface-muted: #64748B;
+  --border: #2A2E37;
+  --primary: #10B981;
+  --on-primary: #022C22;
+  --saved: #F43F5E;
+  --danger: #EF4444;
+  --badge-neutral-bg: #272A32;
+  --badge-neutral-text: #CBD5E1;
+  --badge-anywhere-bg: #064E3B;
+  --badge-anywhere-text: #6EE7B7;
+  --salary: #A3E635;
+  --info-bg: #1E293B;
+  --info-text: #7DD3FC;
+  --active-tab-line: #10B981;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
